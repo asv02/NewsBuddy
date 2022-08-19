@@ -1,0 +1,281 @@
+import React from 'react'
+// import ReactDom from 'react-dom'
+import Newsitem from './newsitem'
+let articles = [{
+    "source": {
+        "id": "ars-technica",
+        "name": "Ars Technica"
+    },
+    "author": "Scharon Harding",
+    "title": "The next best thing to OLED is getting cheaper",
+    "description": "Cooler Master GP27-FQS gaming monitor will lower the cost of entry.",
+    "url": "https://arstechnica.com/gadgets/2022/02/the-next-best-thing-to-oled-is-getting-cheaper/",
+    "urlToImage": "https://cdn.arstechnica.net/wp-content/uploads/2022/02/CoolerMaster_cROPPED-e1645056525283-760x380.jpeg",
+    "publishedAt": "2022-02-17T00:10:53Z",
+    "content": "5 with 5 posters participating\r\nOLED is so popular among shoppers seeking high-end image quality that its acronym is expanding (see: QD-OLED). But in PC monitors, OLED means limited size options and … [+4608 chars]"
+},
+{
+    "source": {
+        "id": "the-next-web",
+        "name": "The Next Web"
+    },
+    "author": "Napier Lopez",
+    "title": "Samsung’s switch to Google Messages finally gives me hope for RCS",
+    "description": "Google’s effort to get everyone behind RCS — or Rich Communication Services, the standard attempting to replace SMS and MMS — is admirable. Sure, RCS isn’t really better than the myriad messaging apps people already use, but it’s a dramatic improvement over p…",
+    "url": "https://thenextweb.com/news/samsung-google-messages-rcs-apple",
+    "urlToImage": "https://img-cdn.tnwcdn.com/image/plugged?filter_last=1&fit=1280%2C640&url=https%3A%2F%2Fcdn0.tnwcdn.com%2Fwp-content%2Fblogs.dir%2F1%2Ffiles%2F2022%2F02%2FSamsung-S22-messages-iphone-copy.jpg&signature=9cc3f607bbb6dc7c26c31086d87b1737",
+    "publishedAt": "2022-02-17T05:45:15Z",
+    "content": "Googles effort to get everyone behind RCS or Rich Communication Services, the standard attempting to replace SMS and MMS is admirable. Sure, RCS isnt really better than the myriad messaging apps peop… [+4983 chars]"
+},
+{
+    "source": {
+        "id": "buzzfeed",
+        "name": "Buzzfeed"
+    },
+    "author": "Rachel Strolle",
+    "title": "44 Thoughts I Had While Watching \"The Sky Is Everywhere\"",
+    "description": "Messy emotions, movie magic, and a great cast.View Entire Post ›",
+    "url": "https://www.buzzfeed.com/rachelstrolle/my-thoughts-on-the-sky-is-everywhere",
+    "urlToImage": "https://img.buzzfeed.com/buzzfeed-static/static/2022-02/15/1/enhanced/850b2519ba95/original-1272-1644888351-38.jpg?crop=1581:830;0,0%26downsize=1250:*",
+    "publishedAt": "2022-02-17T02:51:54Z",
+    "content": "When it comes to YA adaptations, I'm usually cautiously optimistic. I have vivid memories of seeing the first Twilight film after it released on DVD, seeing City of Bones, Love, Simon and The Hate U … [+671 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "heise online"
+    },
+    "author": "Jennifer Li",
+    "title": "6-GHz-Variante: Wie Apple um schnelleren Bluetooth-Funk ringt",
+    "description": "Anzeichen verdichten sich, dass der Bluetooth-Funk mit einer 6-GHz-Variante aufgebohrt werden könnte. Apple-Entwickler setzen sich für höhere Datenraten ein.",
+    "url": "https://www.heise.de/news/6-GHz-Variante-Wie-Apple-um-schnelleren-Bluetooth-Funk-ringt-6350922.html",
+    "urlToImage": "https://heise.cloudimg.io/bound/1200x1200/q85.png-lossy-85.webp-lossy-85.foil1/_www-heise-de_/imgs/18/3/2/7/0/3/0/7/Apple_Logo-f38daf49a7a581d3.jpg",
+    "publishedAt": "2022-02-17T05:00:00Z",
+    "content": "Manchen Lesern dürften die Ohren geklingelt haben, als ein Apple-Ingenieur Ende 2021 aus dem Nähkästchen plauderte. Gary Geaves, Apples Vice President of Acoustics, erzählte dem Magazin What Hi-Fi: \"… [+4399 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Css-tricks.com"
+    },
+    "author": "Chris Coyier",
+    "title": "Add-to-Calendar Button UI Widget",
+    "description": "A useful little UI widget thingy here from Jens Kuerschner. Click the add-to-calendar button, get a list of calendar apps, the user selects which one they actually use, and they get what they need for that calendar. Could be a …\n\nAdd-to-Calendar Button UI Wid…",
+    "url": "https://css-tricks.com/add-to-calendar-button-ui-widget/",
+    "urlToImage": "https://css-tricks.com/wp-json/social-image-generator/v1/image/363861",
+    "publishedAt": "2022-02-17T01:14:21Z",
+    "content": "A useful little UI widget thingy here from Jens Kuerschner. Click the add-to-calendar button, get a list of calendar apps, the user selects which one they actually use, and they get what they need fo… [+2008 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Yahoo Entertainment"
+    },
+    "author": "AccuWeather",
+    "title": "Storm dumps snow across Colorado",
+    "description": "A storm heading east dropped snow across wide swaths of Colorado on Feb. 16.",
+    "url": "https://news.yahoo.com/storm-dumps-snow-across-colorado-045700922.html",
+    "urlToImage": "https://s.yimg.com/hd/cp-video-transcode/prod/2022-02/17/620dda5d2ff0342917168d92/620dda5d2ff0342917168d93_o_U_v2.jpg",
+    "publishedAt": "2022-02-17T04:57:00Z",
+    "content": "The Old Orchard shopping mall, suburban home of the Apple Store, Nordstrom and LOccitane en Provence is a blighted area, the village of Skokie has declared. And why has the local government made so a… [+197 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "AppleInsider"
+    },
+    "author": "news@appleinsider.com (Amber Neely)",
+    "title": "Apple announces \"The Big Conn\" true crime docuseries and podcast",
+    "description": "The four-part true crime docuseries is set to arrive on Apple TV+ in May, featuring a companion podcast launching exclusively on Apple Podcasts.\"The Big Conn\" will tell the story of former eastern Kentucky attorney, Eric C. Conn. Conn is known for defrauding …",
+    "url": "https://appleinsider.com/articles/22/02/17/apple-announces-the-big-conn-true-crime-docuseries-and-podcast",
+    "urlToImage": "https://photos5.appleinsider.com/gallery/47024-91641-yosh-xl.jpg",
+    "publishedAt": "2022-02-17T01:21:50Z",
+    "content": "AppleInsider is supported by its audience and may earn commission as an Amazon Associate and affiliate partner on qualifying purchases. These affiliate partnerships do not influence our editorial con… [+925 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Theregister.com"
+    },
+    "author": "Thomas Claburn",
+    "title": "Google expands Privacy Sandbox to Android",
+    "description": "Web giant shocked, shocked, to find misuse of data going on in here\nGoogle plans to extend its rework of web ad technology – the optimistically named Privacy Sandbox – to Android devices in an effort to limit the misuse of data in its mobile ecosystem.…",
+    "url": "https://www.theregister.com/2022/02/17/google_privacy_sandbox/",
+    "urlToImage": "https://regmedia.co.uk/2020/12/17/shutterstock_android_code.jpg",
+    "publishedAt": "2022-02-17T03:01:29Z",
+    "content": "Google plans to extend its rework of web ad technology the optimistically named Privacy Sandbox to Android devices in an effort to limit the misuse of data in its mobile ecosystem.\r\nIn a blog post on… [+3639 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "HYPEBEAST"
+    },
+    "author": "info@hypebeast.com (HYPEBEAST), HYPEBEAST",
+    "title": "Red Bull Introduces Summer Edition Dragon Fruit as a Permanent Flavor",
+    "description": "After being launched last summer, Red Bull's Summer Edition Dragon Fruit flavor has quickly become a fan favorite. Building on the popularity, the beverage name is now set to make the flavor and permanent offering.Inspired by the delicious exotic fruit, Red B…",
+    "url": "https://hypebeast.com/2022/2/red-bull-summer-edition-dragon-fruit-permanent-launch",
+    "urlToImage": "https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2022%2F02%2Fred-bull-summer-edition-dragon-fruit-permanent-launch-tw.jpg?w=960&cbr=1&q=90&fit=max",
+    "publishedAt": "2022-02-17T04:10:41Z",
+    "content": "After being launched last summer, Red Bull‘s Summer Edition Dragon Fruit flavor has quickly become a fan favorite. Building on the popularity, the beverage name is now set to make the flavor and perm… [+532 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "BGR"
+    },
+    "author": "Chris Smith",
+    "title": "Galaxy S22 Exynos 2200 benchmarks can’t touch the iPhone 11",
+    "description": "The Galaxy S22 is now available for preorder, and you can score a few great deals if you order before the February 25th release date. But there might be buyers out there who will want to wait for more detailed hands-on experiences with the phone before commit…",
+    "url": "https://bgr.com/tech/galaxy-s22-exynos-2200-benchmarks-cant-touch-the-iphone-11/",
+    "urlToImage": "https://bgr.com/wp-content/uploads/2022/02/galaxy-s22-ultra-2.jpg?quality=82&strip=all",
+    "publishedAt": "2022-02-17T03:15:00Z",
+    "content": "The Galaxy S22 is now available for preorder, and you can score a few great deals if you order before the February 25th release date. But there might be buyers out there who will want to wait for mor… [+4531 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "iMore"
+    },
+    "author": "Joe Wituschek",
+    "title": "Apple TV+ announces new true crime docuseries 'The Big Conn'",
+    "description": "What you need to know\n\n\nApple TV+ has announced \"The Big Conn,\" a new documentary series.\nThe series tells the story of the largest social security fraud ever committed against the U.S. government.\n\"The Big Conn\" will premiere on Apple TV+ on May 5.\n\n\nThis on…",
+    "url": "https://www.imore.com/apple-tv-announces-new-true-crime-docuseries-big-conn",
+    "urlToImage": "https://www.imore.com/sites/imore.com/files/styles/large/public/field/image/2019/03/apple-introduces-apple-tv-plus-03252019.jpg",
+    "publishedAt": "2022-02-17T02:23:00Z",
+    "content": "A new true-crime documentary is coming to Apple TV+.\r\nToday, Apple announced \"The Big Conn,\" a new four-part documentary series that tells the story of Eric C. Conn, an attorney who \"defrauded the go… [+1323 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Lifehacker.ru"
+    },
+    "author": "Дарья Костючкова",
+    "title": "Подкаст «Теперь понятно»: мифы из фильмов «Форсаж»",
+    "description": "Гонки на горящем авто задним ходом и на спорткаре между небоскрёбами, эпизод с неуправляемым танком — выясняем, насколько реалистичны трюки из «Форсажа».",
+    "url": "https://lifehacker.ru/teper-ponyatno-138/",
+    "urlToImage": "https://cdn.lifehacker.ru/wp-content/uploads/2021/07/teper_ponyatno_zastavka_1627566064-1280x640.jpg",
+    "publishedAt": "2022-02-17T05:00:51Z",
+    "content": ", , , « » . , , « ».\r\n , .\r\n « » , : Apple Podcasts, Google Podcasts, YouTube, Anchor, «.», «», Spotify, ."
+},
+{
+    "source": {
+        "id": null,
+        "name": "Srad.jp"
+    },
+    "author": "nagazou",
+    "title": "Intel、Tower Semiconductorを買収",
+    "description": "Intelは15日、イスラエルの半導体ファウンドリー事業を行うTower Semiconductorをおよそ54億ドル（約6200億円）で買収すると発表した。Towerは高付加価値アナログ半導体製造で知られており、高周波半導体・MEMS・CMOSイメージセンサー・シリコンゲルマニウムトランジスタ・電力管理チップなどを製造してきた。Intelも以前からTowerの顧客であったとされる（Intelリリース、EE Times Japan、GIGAZINE）。 \n\nTowerはイスラエルや米国だけでなく、ヌヴォトン テク…",
+    "url": "https://hardware.srad.jp/story/22/02/16/172214/",
+    "urlToImage": "https://srad.jp/static/topics/intel_64.png",
+    "publishedAt": "2022-02-17T05:33:00Z",
+    "content": "-- Malcolm Douglas McIlroy"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Cnbeta.com"
+    },
+    "author": "study875",
+    "title": "Windows 11设置新增“你的订阅”：帮用户追踪订阅情况",
+    "description": "除了扩大对 Android 应用生态的支持外，在近日发布的 Windows 11 新版本中还引入了一个小功能，能够让用户更容易跟踪订阅情况。在“设置”>“账户”>“你的微软账户”下新增了“你的订阅”（Your Subscriptions）列表，提供了关于订阅 Microsoft 365 等服务的信息。 阅读全文",
+    "url": "https://www.cnbeta.com/articles/tech/1237789.htm",
+    "urlToImage": "https://static.cnbetacdn.com/article/2022/0217/6578c124558745d.webp",
+    "publishedAt": "2022-02-17T03:11:09Z",
+    "content": "PCWorld OneDrive 365 Game Pass\r\nWindows iOS Apple ArcadeiCloud Apple TV+ Windows 10"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Cnbeta.com"
+    },
+    "author": "study875",
+    "title": "AirPods电池老化只能丢？国人研发无损换电池满血复活",
+    "description": "2016年，AirPods TWS无线耳机诞生，从此无线耳机历史可以分为AirPods前、AirPods后两个部分。 2019年3月，AirPods 2系列发布， 2019年10月，支持主动降噪的AirPods Pro发布。 阅读全文",
+    "url": "https://www.cnbeta.com/articles/tech/1237851.htm",
+    "urlToImage": "https://static.cnbetacdn.com/thumb/article/2022/0217/bcf75ae1c1f7c63.jpg",
+    "publishedAt": "2022-02-17T05:47:49Z",
+    "content": "AirPods1200\r\nAirPods\r\n/\r\nApple \r\nAirPodsAirPods / AirPods Pro 379/3791137\r\nAirPods \r\nAirPods\r\nAirPods 12+GOKY93mWhA160493mWh\r\nAirPods 3A26470.133Wh3.67VVARTA\r\nAirPods ProCP1154 A3HOC0.16Wh3.7V\r\nAirPo… [+150 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "GSMArena.com"
+    },
+    "author": "Ricky",
+    "title": "Counterpoint: China’s Q4 shipments fell 11% YoY as Honor ranks second since splitting from Huawei",
+    "description": "The latest report from Counterpoint Research shows the Chinese market’s smartphone sales performance. Although overall shipments for the market fell by 11% compared to the same quarter in 2020, smartphone brand Honor managed to rank second for the first time …",
+    "url": "https://www.gsmarena.com/counterpoint_chinas_q4_shipments_fell_11_yoy_as_honor_ranks_second_since_splitting_from_huawei-news-53186.php",
+    "urlToImage": "https://fdn.gsmarena.com/imgroot/news/22/02/q4-2021-chinese-smartphone-market/-952x498w6/gsmarena_000.jpg",
+    "publishedAt": "2022-02-17T05:15:02Z",
+    "content": "The latest report from Counterpoint Research shows the Chinese markets smartphone sales performance. Although overall shipments for the market fell by 11% compared to the same quarter in 2020, smartp… [+1023 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Motley Fool"
+    },
+    "author": "newsfeedback@fool.com (Motley Fool Transcribing)",
+    "title": "AppLovin Corporation (APP) Q4 2021 Earnings Call Transcript",
+    "description": "APP earnings call for the period ending December 31, 2021.",
+    "url": "https://www.fool.com/earnings/call-transcripts/2022/02/16/applovin-corporation-app-q4-2021-earnings-call-tra/",
+    "urlToImage": "https://g.foolcdn.com/editorial/images/1/featured-transcript-logo-template.jpg",
+    "publishedAt": "2022-02-17T03:00:33Z",
+    "content": "Image source: The Motley Fool.\r\nAppLovin Corporation (NASDAQ:APP)Q4 2021 Earnings CallFeb 16, 2022, 5:00 p.m. ET\r\nContents:\r\n<ul><li>Prepared Remarks</li><li>Questions and Answers</li><li>Call Partic… [+53184 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Motley Fool"
+    },
+    "author": "newsfeedback@fool.com (Motley Fool Transcribing)",
+    "title": "The Trade Desk (TTD) Q4 2021 Earnings Call Transcript",
+    "description": "TTD earnings call for the period ending December 31, 2021.",
+    "url": "https://www.fool.com/earnings/call-transcripts/2022/02/16/the-trade-desk-ttd-q4-2021-earnings-call-transcrip/",
+    "urlToImage": "https://g.foolcdn.com/editorial/images/1/featured-transcript-logo-template.jpg",
+    "publishedAt": "2022-02-17T01:00:44Z",
+    "content": "Image source: The Motley Fool.\r\nThe Trade Desk (NASDAQ:TTD)Q4 2021 Earnings CallFeb 16, 2022, 11:30 a.m. ET\r\nContents:\r\n<ul><li>Prepared Remarks</li><li>Questions and Answers</li><li>Call Participant… [+74539 chars]"
+},
+{
+    "source": {
+        "id": "el-mundo",
+        "name": "El Mundo"
+    },
+    "author": "Javier Attard",
+    "title": "Historia de un parricidio en Elche: de la absoluta frialdad a la búsqueda de rasgos psicopáticos",
+    "description": "¿Por qué se inició la discusión en la que el parricida decidió matar a su madre? ¿Cómo intentó construirse una coartada? ¿Ha mostrado algún sentimiento o emoción? La...",
+    "url": "https://www.elmundo.es/podcasts/el-mundo-al-dia/2022/02/17/620da444fc6c83a4778b456f.html",
+    "urlToImage": "https://phantom-elmundo.unidadeditorial.es/28239df82e9d549c4d24be5377d71176/resize/1200/f/jpg/assets/multimedia/imagenes/2022/02/17/16450609169806.jpg",
+    "publishedAt": "2022-02-17T01:28:35Z",
+    "content": "Todos los episodios de EL MUNDO al día están en la web de omnystudio. También en Google Podcast, Apple Podcast, Spotify, Ivoox, Podimo...\r\n¿Por qué se inició la discusión en la que el parricida decid… [+452 chars]"
+},
+{
+    "source": {
+        "id": null,
+        "name": "Socialmediaexplorer.com"
+    },
+    "author": "Adam",
+    "title": "Donald Trump Jr. Shared First Screenshot Of ‘Truth Social’ – Twitter Rival Slated To Launch Next Week",
+    "description": "WASHINGTON DC 31 July: U.S. President Donald Trump looks back on journalists following his welcome … [+]The White House welcomed the Mongolian President Battulga Khhaltmaa on July 31, 2019, in Washington DC. Khaltmaa traveled to...read more\nThe post Donald Tr…",
+    "url": "https://socialmediaexplorer.com/content-sections/news-and-noise/donald-trump-jr-shared-first-screenshot-of-truth-social-twitter-rival-slated-to-launch-next-week/",
+    "urlToImage": "https://socialmediaexplorer.com/wp-content/uploads/2022/02/1645057776_0x0.jpg",
+    "publishedAt": "2022-02-17T00:29:22Z",
+    "content": "WASHINGTON DC 31 July: U.S. President Donald Trump looks back on journalists following his welcome … [+]The White House welcomed the Mongolian President Battulga Khhaltmaa on July 31, 2019, in Washin… [+3368 chars]"
+}
+]//DO IT WITH CLASS BASED COMPONENTS.
+//DO IT WITH CLASS BASED COMPONENTS.
+//DO IT WITH CLASS BASED COMPONENTS.
+function news() {
+  return (
+    <div className="container my-3">
+    <div className="row">
+    
+    {articles.map((element)=>{
+         return <div className="col-md-4" key={element.url}>
+         <Newsitem title={element.title} desc={element.description} imageurl={element.urlToImage} newsurl={element.url}/></div>
+    })}        
+    </div>
+    </div>
+)
+}
+
+export default news
